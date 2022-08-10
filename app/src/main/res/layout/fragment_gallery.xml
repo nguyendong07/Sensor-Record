@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="170dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:text="Start"
+        android:onClick="startRecord"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/frequency"
+        android:layout_width="118dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:paddingTop="28px"
+        android:text="Frequency record"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="118dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="56dp"
+        android:paddingTop="28px"
+        android:text="Record Time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="118dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:paddingTop="28px"
+        android:text="Sensor Type"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.179" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="85dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="40dp"
+        android:paddingTop="28px"
+        android:text="Sensor Type"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="118dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="56dp"
+        android:paddingTop="28px"
+        android:text="Second"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="68dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginTop="12dp"
+        android:paddingTop="28px"
+        android:text="Hz"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/frequencyValue"
+        android:layout_width="62dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="50"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="178dp" />
+
+    <EditText
+        android:id="@+id/timeValue"
+        android:layout_width="89dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="15"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="171dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="164dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="76dp"
+        android:text="Accelerometer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.186" />
+
+    <RadioButton
+        android:id="@+id/radioButton5"
+        android:layout_width="164dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="76dp"
+        android:text="Gyroscope"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
+
+    <RadioButton
+        android:id="@+id/radioButton6"
+        android:layout_width="164dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="76dp"
+        android:text="Orientation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
+    <RadioButton
+        android:id="@+id/radioButton7"
+        android:layout_width="164dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="76dp"
+        android:text="All"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="284dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="130dp"
+        android:layout_height="38dp"
+
+        android:layout_marginEnd="88dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.386" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RadioGroup>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="346dp"
+        android:layout_height="310dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.807">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/activityGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/BSC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BSC" />
+
+                <RadioButton
+                    android:id="@+id/CSO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CSO" />
+
+                <RadioButton
+                    android:id="@+id/FKL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FKL" />
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

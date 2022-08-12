@@ -10,13 +10,14 @@
         android:id="@+id/start"
         android:layout_width="170dp"
         android:layout_height="47dp"
-        android:layout_marginBottom="16dp"
-        android:text="Start"
         android:onClick="startRecord"
+        android:text="Start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.961"
         tools:ignore="MissingConstraints" />
 
     <EditText
@@ -24,13 +25,13 @@
         android:layout_width="118dp"
         android:layout_height="45dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
+        android:importantForAutofill="no"
         android:paddingTop="28px"
         android:text="Frequency record"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/time"
@@ -48,27 +49,14 @@
         android:id="@+id/textView6"
         android:layout_width="118dp"
         android:layout_height="45dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginTop="112dp"
         android:paddingTop="28px"
         android:text="Sensor Type"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="85dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="40dp"
-        android:paddingTop="28px"
-        android:text="Sensor Type"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
@@ -98,111 +86,110 @@
         android:id="@+id/frequencyValue"
         android:layout_width="62dp"
         android:layout_height="42dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="50"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="178dp" />
+        tools:ignore="MissingConstraints" />
+
 
     <EditText
         android:id="@+id/timeValue"
         android:layout_width="89dp"
         android:layout_height="43dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="15"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="171dp" />
+        tools:ignore="MissingConstraints" />
 
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="164dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="76dp"
-        android:text="Accelerometer"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <RadioGroup
+        android:id="@+id/sensorType"
+        android:layout_width="190dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="112dp"
+        android:padding="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.186" />
+        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RadioButton
-        android:id="@+id/radioButton5"
-        android:layout_width="164dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="76dp"
-        android:text="Gyroscope"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.231" />
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="164dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="76dp"
+            android:text="Accelerometer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.186" />
 
-    <RadioButton
-        android:id="@+id/radioButton6"
-        android:layout_width="164dp"
-        android:layout_height="22dp"
-        android:layout_marginEnd="76dp"
-        android:text="Orientation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.275" />
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="164dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="76dp"
+            android:text="Gyroscope"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.231" />
 
-    <RadioButton
-        android:id="@+id/radioButton7"
-        android:layout_width="164dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="76dp"
-        android:text="All"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="164dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="76dp"
+            android:text="Orientation"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.275" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="164dp"
+            android:layout_height="23dp"
+            android:layout_marginEnd="76dp"
+            android:text="All"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.307" />
+
+    </RadioGroup>
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="74dp"
-        tools:layout_editor_absoluteY="284dp" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="130dp"
-        android:layout_height="38dp"
-
-        android:layout_marginEnd="88dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        tools:ignore="MissingConstraints">
 
     </RadioGroup>
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="346dp"
-        android:layout_height="310dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="355dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/stroke_bg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintHorizontal_bias="0.703"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="50px">
 
             <RadioGroup
                 android:id="@+id/activityGroup"
@@ -217,6 +204,18 @@
                     android:text="BSC" />
 
                 <RadioButton
+                    android:id="@+id/CHU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CHU" />
+
+                <RadioButton
+                    android:id="@+id/CSI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CSI" />
+
+                <RadioButton
                     android:id="@+id/CSO"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -227,8 +226,69 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="FKL" />
-            </RadioGroup>
 
+                <RadioButton
+                    android:id="@+id/FOL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FOL" />
+
+                <RadioButton
+                    android:id="@+id/JOG"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="JOG" />
+
+                <RadioButton
+                    android:id="@+id/JUM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="JUM" />
+
+                <RadioButton
+                    android:id="@+id/SCH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SCH" />
+
+                <RadioButton
+                    android:id="@+id/SDL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SDL" />
+
+                <RadioButton
+                    android:id="@+id/SIT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SIT" />
+
+
+                <RadioButton
+                    android:id="@+id/STD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="STD" />
+
+
+                <RadioButton
+                    android:id="@+id/STN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="STN" />
+
+                <RadioButton
+                    android:id="@+id/STU"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="STU" />
+
+                <RadioButton
+                    android:id="@+id/WAL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="WAL" />
+            </RadioGroup>
         </LinearLayout>
     </ScrollView>
 
